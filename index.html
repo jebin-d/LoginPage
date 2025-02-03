@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Sign-In API -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
@@ -13,7 +12,6 @@
     <div class="login-container">
         <h2>Login</h2>
 
-        <!-- Login Form -->
         <form action="/login" method="POST">
             <div class="input-group">
                 <label for="email">Email:</label>
@@ -35,11 +33,9 @@
     </div>
 
     <script>
-        // Google Sign-In Success Handler
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
             console.log("Logged in as: " + profile.getName());
-            // Send the ID token to your server for verification and authentication
             var id_token = googleUser.getAuthResponse().id_token;
             console.log(id_token);
         }
